@@ -8,10 +8,10 @@ export function Home() {
 
   const services = [
     { name: "Kidney Care", icon: "💎", desc: "Expert treatment for kidney stones and renal health." },
-    { name: "Corona Recovery", icon: "🦠", desc: "Holistic support for post-viral recovery and immunity." },
     { name: "Chronic Diseases", icon: "❤️", desc: "Long-term solutions for persistent health issues." },
     { name: "Skin & Hair", icon: "🌸", desc: "Natural remedies for glowing skin and healthy hair." },
     { name: "Homeopathic Store", icon: "💊", desc: "Genuine homeopathic medicines at best prices." },
+    { name: "Corona Recovery", icon: "🦠", desc: "Holistic support for post-viral recovery and immunity." },
     { name: "General Wellness", icon: "🌿", desc: "Personalized care for your family's daily health." },
   ];
 
@@ -72,46 +72,48 @@ export function Home() {
   return (
     <div className="overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-20">
+      <section className="relative min-h-[85vh] md:min-h-[90vh] flex items-start pt-20 md:pt-24 lg:pt-32">
         <div className="absolute inset-0 z-0">
-          <img 
+          <img
             src={clinicExteriorImage}
-            alt="Om Homeopathic Clinic Exterior" 
+            alt="Om Homeopathic Clinic Exterior"
             className="w-full h-full object-cover opacity-45"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent" />
         </div>
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="max-w-3xl">
+        <div className="container mx-auto px-6 relative z-10 pt-0 pb-12 md:pt-4 md:pb-20 lg:pt-8 lg:pb-32">
+          <div className="max-w-4xl">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <span className="inline-block px-4 py-1.5 mb-6 text-sm font-medium tracking-wider text-primary uppercase bg-primary/10 rounded-full">
+              <span className="inline-block px-4 py-1.5 mb-4 text-xs md:text-sm font-semibold tracking-widest text-primary uppercase bg-primary/10 rounded-full border border-primary/20">
                 Trusted Homeopathic Care in Meerut
               </span>
-              <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight tracking-tight text-foreground">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-10 leading-[1.1] tracking-tight text-foreground">
                 Natural Healing. <br />
                 <span className="text-primary italic">Personalized Care.</span>
               </h1>
-              <p className="text-xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
+              <p className="text-base md:text-xl lg:text-2xl text-muted-foreground mb-10 leading-relaxed max-w-2xl">
                 We provide safe, effective, and affordable homeopathic treatment for a wide range of acute and chronic health conditions, and we also offer genuine homeopathic medicines at our clinic store. Our approach focuses on treating the root cause of illness, not just the symptoms.
               </p>
-              <div className="flex flex-wrap gap-3 mb-10">
-                <span className="px-4 py-2 bg-white/85 rounded-full text-sm font-semibold text-foreground shadow-sm border border-border/60">
+
+              <div className="flex flex-wrap gap-3 mb-12">
+                <span className="px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full text-xs md:text-sm font-semibold text-foreground shadow-sm border border-border/40">
                   Genuine Homeopathic Medicines
                 </span>
-                <span className="px-4 py-2 bg-white/85 rounded-full text-sm font-semibold text-foreground shadow-sm border border-border/60">
+                <span className="px-4 py-2 bg-white/60 backdrop-blur-sm rounded-full text-xs md:text-sm font-semibold text-foreground shadow-sm border border-border/40">
                   German and Indian Brands
                 </span>
               </div>
+
               <a
                 href="tel:+919837188088"
-                className="inline-flex items-center justify-center gap-2 bg-primary text-white px-10 py-4 rounded-full font-semibold shadow-xl shadow-primary/20 hover:scale-105 transition-transform text-center"
+                className="inline-flex items-center justify-center gap-3 bg-primary text-white px-8 md:px-12 py-4 md:py-5 rounded-full font-bold shadow-2xl shadow-primary/30 hover:scale-105 active:scale-95 transition-all text-base md:text-lg w-full sm:w-auto"
               >
-                <Phone className="size-5" />
+                <Phone className="size-5 md:size-6" />
                 Call +91 98371 88088 to Book
               </a>
             </motion.div>
@@ -120,13 +122,13 @@ export function Home() {
       </section>
 
       {/* Trust Section */}
-      <section className="relative z-20 -mt-12 pb-10">
+      <section className="relative z-20 py-12 md:py-24 bg-muted/30">
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="overflow-hidden rounded-[40px] border border-border/60 bg-white shadow-[0_30px_90px_rgba(26,26,26,0.08)]"
+            className="overflow-hidden rounded-[32px] md:rounded-[40px] border border-border/60 bg-white shadow-[0_40px_100px_rgba(0,0,0,0.04)]"
           >
             <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
               <div className="p-8 md:p-12 lg:p-14">
@@ -134,7 +136,7 @@ export function Home() {
                   Trusted by Local Families
                 </div>
                 <h2 className="mt-6 text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-                  Strong reviews on Google Maps and Justdial
+                  Served over 1 Lakh+ Patients
                 </h2>
                 <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
                   Patients trust Om Homeopathic Store & Clinic for thoughtful consultations, genuine medicines, and reliable long-term care in Meerut.
@@ -305,7 +307,7 @@ export function Home() {
           >
             <div className="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <h2 className="text-3xl md:text-5xl font-bold mb-8">💊 Om Homeopathic Store</h2>
+                <h2 className="text-3xl md:text-5xl font-bold mb-8">Om Homeopathic Store</h2>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                   We also provide high-quality German and Indian homeopathic medicines at our clinic store. You can visit us to buy authentic remedies, refill prescribed medicines, and get guidance on the right medicines from our team.
                 </p>
@@ -344,12 +346,12 @@ export function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-32 bg-white">
+      <section className="py-16 md:py-32 bg-white">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-20 tracking-tight">
+          <h2 className="text-3xl md:text-6xl font-bold mb-12 md:mb-20 tracking-tight">
             Why Choose <span className="text-primary">Us?</span>
           </h2>
-          <div className="grid md:grid-cols-5 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
             {[
               { icon: "✔", title: "Safe & Natural", desc: "100% natural treatments" },
               { icon: "✔", title: "No Side Effects", desc: "Completely safe for all ages" },
@@ -368,16 +370,16 @@ export function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-32">
+      <section className="py-16 md:py-32">
         <div className="container mx-auto px-6">
-          <div className="text-center max-w-2xl mx-auto mb-20">
-            <h2 className="text-4xl font-bold mb-6">Comprehensive Care</h2>
-            <p className="text-muted-foreground text-lg">
-              We offer a wide range of homeopathic treatments tailored to your specific needs, 
+          <div className="text-center max-w-2xl mx-auto mb-12 md:mb-20">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">Comprehensive Care</h2>
+            <p className="text-muted-foreground text-base md:text-lg">
+              We offer a wide range of homeopathic treatments tailored to your specific needs,
               focusing on the root cause of the ailment.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {services.map((service, i) => (
               <motion.div
                 key={i}
@@ -399,25 +401,25 @@ export function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-32 bg-primary/5">
+      <section className="py-16 md:py-32 bg-primary/5">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 md:mb-16 gap-6">
             <div className="max-w-xl">
-              <h2 className="text-4xl font-bold mb-6">What Our Patients Say</h2>
+              <h2 className="text-3xl md:text-5xl font-bold mb-6">What Our Patients Say</h2>
               <p className="text-muted-foreground text-lg">
                 Real stories from patients who found healing and comfort at Om Homeopathic Clinic.
               </p>
             </div>
-            <a 
-              href="https://maps.app.goo.gl/KNyAZxL4hw9Pk58N8" 
-              target="_blank" 
+            <a
+              href="https://maps.app.goo.gl/KNyAZxL4hw9Pk58N8"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all"
             >
               View all 27+ reviews on Google <Star className="size-5 fill-primary" />
             </a>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((t, i) => (
               <motion.div
@@ -449,11 +451,11 @@ export function Home() {
       </section>
 
       {/* Map & Visit Section */}
-      <section className="py-32">
+      <section className="py-16 md:py-32">
         <div className="container mx-auto px-6">
-          <div className="bg-white rounded-[40px] overflow-hidden shadow-2xl border border-border flex flex-col lg:flex-row">
-            <div className="lg:w-1/2 p-12 lg:p-20">
-              <h2 className="text-4xl font-bold mb-8">Visit Om Homeopathic Clinic</h2>
+          <div className="bg-white rounded-[32px] md:rounded-[40px] overflow-hidden shadow-2xl border border-border flex flex-col lg:flex-row">
+            <div className="lg:w-1/2 p-8 md:p-12 lg:p-20">
+              <h2 className="text-3xl md:text-5xl font-bold mb-8">Visit Us</h2>
               <div className="space-y-8">
                 <div className="flex gap-6">
                   <div className="size-12 bg-primary/10 rounded-2xl flex items-center justify-center shrink-0">
@@ -492,7 +494,7 @@ export function Home() {
                 </div>
               </div>
               <div className="mt-12">
-                <a 
+                <a
                   href="https://maps.app.goo.gl/KNyAZxL4hw9Pk58N8"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -505,12 +507,12 @@ export function Home() {
             </div>
             <div className="lg:w-1/2 min-h-[400px] bg-muted relative">
               {/* Google Maps Embed UI Snippet mockup */}
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3491.5644837549!2d77.7289!3d28.9396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c6569f688e70b%3A0xc39a48d88701041d!2sOm%20Homeopathic%20Clinic!5e0!3m2!1sen!2sin!4v1714380000000!5m2!1sen!2sin" 
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3491.5644837549!2d77.7289!3d28.9396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c6569f688e70b%3A0xc39a48d88701041d!2sOm%20Homeopathic%20Clinic!5e0!3m2!1sen!2sin!4v1714380000000!5m2!1sen!2sin"
                 className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
-                style={{ border: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
+                style={{ border: 0 }}
+                allowFullScreen={true}
+                loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>

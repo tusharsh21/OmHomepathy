@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import { getBaseAssetUrl } from "../utils/base-path";
 
 export function About() {
-  const doctorImage = getBaseAssetUrl("doctor_real.jpg");
+  const doctorImage = getBaseAssetUrl("doctor_v2.png");
   const clinicSignImage = getBaseAssetUrl("clinic_sign.jpg");
 
   return (
@@ -38,12 +38,11 @@ export function About() {
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="aspect-[3/4] rounded-[40px] overflow-hidden shadow-2xl">
+              <div className="rounded-[40px] overflow-hidden shadow-2xl bg-muted">
                 <ImageWithFallback
                   src={doctorImage}
                   alt="Dr. Ravindar Kumar"
-                  className="h-full w-full object-cover"
-                  style={{ transform: "rotate(-90deg) scale(1.42)" }}
+                  className="w-full h-auto block object-contain"
                 />
               </div>
               <div className="absolute -bottom-8 -right-8 bg-white p-8 rounded-3xl shadow-xl border border-border hidden md:block">
